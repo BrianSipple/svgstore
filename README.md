@@ -34,9 +34,11 @@ See the [examples directory](https://github.com/shannonmoeller/svgstore/tree/mas
 
 ## API
 
-### svgstore(): SvgStore
+### svgstore([options]): SvgStore
 
 Creates a container svg sprites document.
+
+- `options` `{Object}`: [Options for converting SVGs to symbols](#svgstore-options)
 
 ### .element
 
@@ -55,6 +57,10 @@ Appends a file to the sprite with the given `id`.
   - `inline` `{Boolean}` (default: `false`) Don't output `<?xml ?>` and `DOCTYPE`.
 
 Outputs sprite as a string of XML.
+
+## <a name="options"></a>Options
+
+- `stripInlineStyles` `{Boolean}|{Array}` (default: `false`) Remove inline style attributes from the SVG, which may override later CSS-based styles.
 
 ## Contribute
 

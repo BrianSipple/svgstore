@@ -5,6 +5,21 @@ var doctype = '<?xml version="1.0" encoding="UTF-8"?>' +
 	'<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" ' +
 	'"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
 
+test('should set options for its instance', async assert => {
+	var store = svgstore();
+	assert.truthy(store.options);
+	assert.is(store.options.stripInlineStyles, false);
+});
+
+test('should allow configurability of options through an options hash', async assert => {
+	var store1 = svgstore();
+	assert.is({}, store.options);
+
+	var store2 = svgstore({});
+	assert.is()
+
+});
+
 test('should create an svg document', async assert => {
 	var store = svgstore();
 	var svg = store.toString();
@@ -33,3 +48,10 @@ test('should combine svgs', async assert => {
 
 	assert.is(store.toString(), expected);
 });
+
+// test('should remove inline styles when the option to do so is provided', async assert => {
+// 	var store = svgstore();
+// 	var svgString
+
+// 	assert.is(store.toString())
+// });

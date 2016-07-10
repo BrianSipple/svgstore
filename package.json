@@ -7,6 +7,7 @@
     "coveralls": "nyc report -r text-lcov | coveralls",
     "pretest": "xo src/*.js test/*.js",
     "test": "nyc ava -v",
+    "test:debug": "ava --debug=45785 test/svgstore.js",
     "posttest": "nyc report -r lcov",
     "watch": "chokidar '{src,test}/**/*.js' -c 'npm test'"
   },
@@ -37,6 +38,7 @@
     "ava": "^0.12.0",
     "chokidar-cli": "^1.2.0",
     "coveralls": "^2.11.6",
+    "merge": "1.2.0",
     "nyc": "^6.0.0",
     "xo": "^0.12.1"
   },
